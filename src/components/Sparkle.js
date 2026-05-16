@@ -10,11 +10,11 @@ export default function Sparkle() {
     let mouseX = 0, mouseY = 0;
 
     const spawn = (x, y) => {
-      const count = 2;
+      const count = 4;
       for (let i = 0; i < count; i++) {
         const el = document.createElement('span');
         el.className = 'sparkle-dot';
-        const size = Math.random() * 3 + 1.5;
+        const size = Math.random() * 4 + 2.5;
         const angle = Math.random() * 360;
         const dist = Math.random() * 18 + 6;
         const color = COLORS[Math.floor(Math.random() * COLORS.length)];
@@ -38,7 +38,7 @@ export default function Sparkle() {
       mouseY = e.clientY;
     };
 
-    const interval = setInterval(() => spawn(mouseX, mouseY), 100);
+    const interval = setInterval(() => spawn(mouseX, mouseY), 70);
 
     window.addEventListener('mousemove', onMove);
     return () => {
