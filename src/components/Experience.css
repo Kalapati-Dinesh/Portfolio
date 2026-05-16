@@ -1,0 +1,117 @@
+.timeline { position: relative; padding-left: 2rem; }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), rgba(96,165,250,0.1));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 1.5rem;
+  width: 2rem; height: 2rem;
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(96,165,250,0.4);
+}
+
+.timeline-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: all 0.25s;
+}
+
+.timeline-card:hover {
+  border-color: rgba(96,165,250,0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 0 20px rgba(96,165,250,0.08);
+  transform: translateX(4px);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-company {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.timeline-right { text-align: right; }
+
+.timeline-period {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-type {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  background: rgba(96,165,250,0.1);
+  border: 1px solid rgba(96,165,250,0.3);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  color: var(--primary2);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.timeline-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.timeline-points li {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.timeline-points li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .timeline { padding-left: 1.5rem; }
+  .timeline-header { flex-direction: column; }
+  .timeline-right { text-align: left; }
+  .timeline-dot { width: 1.6rem; height: 1.6rem; left: -1.5rem; font-size: 0.7rem; }
+}

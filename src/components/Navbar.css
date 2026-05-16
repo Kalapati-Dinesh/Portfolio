@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 8%;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(6, 9, 16, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(96,165,250,0.1);
+  padding: 0.8rem 8%;
+}
+
+.nav-brand {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.brand-bracket { color: var(--primary); }
+.brand-name { color: var(--text); margin: 0 2px; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.4rem 0.9rem;
+  position: relative;
+  letter-spacing: 0.3px;
+  transition: color 0.2s, letter-spacing 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: -2px;
+  height: 1.5px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.nav-links li a:hover {
+  color: var(--white);
+  letter-spacing: 1.5px;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.nav-active::after {
+  transform: scaleX(1);
+}
+
+.nav-links li a.nav-active {
+  color: var(--white);
+}
+
+.nav-resume {
+  padding: 0.4rem 1rem !important;
+  border: 1px solid rgba(96,165,250,0.4) !important;
+  border-radius: 6px !important;
+  color: var(--primary) !important;
+  transition: all 0.2s !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem !important;
+  margin-left: 0.5rem;
+  letter-spacing: 0.3px !important;
+}
+
+.nav-resume::after { display: none !important; }
+
+.nav-resume:hover {
+  background: rgba(96,165,250,0.12) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 15px rgba(96,165,250,0.2) !important;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: absolute;
+  right: 6%;
+}
+
+@media (max-width: 768px) {
+  .navbar { justify-content: center; }
+  .hamburger { display: block; }
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    width: 240px;
+    background: var(--bg2);
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-left: 1px solid var(--border);
+    padding: 2rem;
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-links li a { font-size: 1rem; display: block; padding: 0.6rem 1rem; }
+}

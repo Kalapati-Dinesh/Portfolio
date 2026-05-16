@@ -1,0 +1,139 @@
+.section {
+  padding: 5rem 8%;
+  position: relative;
+}
+
+#about        { background: #0d1f3c; }
+#skills       { background: #071828; }
+#experience   { background: #112244; }
+#projects     { background: #081520; }
+#education    { background: #0e2040; }
+#certificates { background: #091622; }
+#contact      { background: #0c1e38; }
+
+.container { max-width: 1080px; margin: 0 auto; }
+
+.section-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--primary2);
+  background: rgba(96,165,250,0.08);
+  border: 1px solid rgba(96,165,250,0.2);
+  padding: 0.25rem 0.9rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--text);
+  letter-spacing: -0.5px;
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text p {
+  color: #9aaabb;
+  line-height: 1.95;
+  margin-bottom: 1.2rem;
+  font-size: 0.97rem;
+}
+
+.highlight {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.about-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+
+.stat-num {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: #9aaabb;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0.25rem;
+}
+
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: all 0.25s;
+  cursor: default;
+}
+
+.about-card:hover {
+  border-color: var(--primary);
+  transform: translateX(3px);
+  background: rgba(96,165,250,0.03);
+  box-shadow: 0 2px 10px rgba(96,165,250,0.06);
+}
+
+.about-card-icon {
+  font-size: 1.2rem;
+  color: var(--primary);
+  min-width: 1.8rem;
+}
+
+.about-card-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.15rem;
+}
+
+.about-card-value {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 6%; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 3.5rem 5%; }
+  .section-title { font-size: 1.6rem; }
+}
