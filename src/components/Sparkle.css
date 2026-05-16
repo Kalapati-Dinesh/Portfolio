@@ -9,7 +9,7 @@
   position: fixed;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  animation: sparkleFly 0.8s ease forwards;
+  animation: sparkleFly 1.2s ease forwards;
   pointer-events: none;
   filter: none;
 }
