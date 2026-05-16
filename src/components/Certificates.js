@@ -7,14 +7,14 @@ const certs = [
     issuer: 'KodNest',
     desc: 'Comprehensive training in Java, Spring Boot, React.js, SQL, and full-stack development practices.',
     color: '#6366f1',
-    file: '/certificates/java-fullstack.pdf.pdf',
+    file: '/certificates/java-fullstack.pdf',
   },
   {
     title: 'Web Developer',
     issuer: 'Rveiya Dynamics Pvt. Ltd',
     desc: 'Hands-on web development experience covering frontend and backend technologies.',
     color: '#10b981',
-    file: '/certificates/web-developer.pdf.pdf',
+    file: '/certificates/web-developer.pdf',
   },
 ];
 
