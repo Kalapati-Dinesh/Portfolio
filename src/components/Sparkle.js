@@ -10,15 +10,15 @@ export default function Sparkle() {
     let mouseX = 0, mouseY = 0;
 
     const spawn = (x, y) => {
-      const count = 12;
+      const count = 8;
       for (let i = 0; i < count; i++) {
         const el = document.createElement('span');
         el.className = 'sparkle-dot';
-        const size = Math.random() * 9 + 4;
+        const size = Math.random() * 4 + 2;
         const angle = Math.random() * 360;
-        const dist = Math.random() * 70 + 30;
+        const dist = Math.random() * 30 + 10;
         const color = COLORS[Math.floor(Math.random() * COLORS.length)];
-        const delay = Math.random() * 0.15;
+        const delay = Math.random() * 0.1;
         el.style.cssText = `
           left:${x}px; top:${y}px;
           width:${size}px; height:${size}px;
