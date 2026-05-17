@@ -53,8 +53,8 @@ export default function Hero() {
     });
 
     const resize = () => {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width  = canvas.offsetWidth  || window.innerWidth;
+      canvas.height = canvas.offsetHeight || window.innerHeight;
     };
 
     /* shapes */
@@ -465,7 +465,10 @@ export default function Hero() {
     };
     const onOrientation = () => setTimeout(resize, 150);
 
-    resize(); draw(); scheduleMorph();
+    resize();
+    const ro = new ResizeObserver(() => resize());
+    ro.observe(canvas);
+    draw(); scheduleMorph();
 
     const fireLightning = () => {
       const approxPts = base.map(b => ({ sx: canvas.width*0.72+b.x, sy: canvas.height*0.5+b.y }));
@@ -494,6 +497,7 @@ export default function Hero() {
       window.removeEventListener('wheel',             onScroll);
       window.removeEventListener('resize',            resize);
       window.removeEventListener('orientationchange', onOrientation);
+    ro.disconnect();
     };
   }, []);
 
