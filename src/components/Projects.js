@@ -13,7 +13,7 @@ const projects = [
     ],
     tags: ['Java', 'Spring Boot', 'React.js', 'MySQL', 'JWT', 'Hibernate', 'REST API'],
     color: '#6366f1',
-    github: 'https://github.com/KalapatiDinesh',
+    github: 'https://github.com/Kalapati-Dinesh/HireFlow',
   },
   {
     title: 'Traffic Sign Recognition System (CNN-Based)',
