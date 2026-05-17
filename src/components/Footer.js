@@ -11,7 +11,7 @@ export default function Footer() {
           Made with <FiHeart className="heart" /> by Kalapati Dinesh
         </p>
         <div className="footer-socials">
-          <a href="https://github.com/Kalapati-Dinesh" target="_blank" rel="noreferrer"><FaGithub /></a>
+          <a href="https://github.com/Kalapati-Dinesh?tab=repositories" target="_blank" rel="noreferrer"><FaGithub /></a>
           <a href="https://www.linkedin.com/in/dinesh2745" target="_blank" rel="noreferrer"><FaLinkedin /></a>
           <a href="mailto:dineshkalapati0498@gmail.com"><MdEmail /></a>
         </div>

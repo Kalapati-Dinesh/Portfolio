@@ -6,7 +6,7 @@ const contactInfo = [
   { icon: <MdEmail />, label: 'Email', value: 'dineshkalapati0498@gmail.com', href: 'mailto:dineshkalapati0498@gmail.com' },
   { icon: <MdPhone />, label: 'Phone', value: '+91-9398961435', href: 'tel:+919398961435' },
   { icon: <MdLocationOn />, label: 'Location', value: 'Tirupati, Andhra Pradesh', href: null },
-  { icon: <FaGithub />, label: 'GitHub', value: 'github.com/Kalapati-Dinesh', href: 'https://github.com/Kalapati-Dinesh' },
+  { icon: <FaGithub />, label: 'GitHub', value: 'github.com/Kalapati-Dinesh', href: 'https://github.com/Kalapati-Dinesh?tab=repositories' },
   { icon: <FaLinkedin />, label: 'LinkedIn', value: 'linkedin.com/in/dinesh2745', href: 'https://www.linkedin.com/in/dinesh2745' },
 ];
 
