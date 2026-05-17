@@ -150,9 +150,9 @@ export default function Hero() {
     /* lightning */
     const spawnBolt = (pts) => {
       const i = Math.floor(Math.random() * pts.length);
-      let cur = i;
-      const chain = [cur];
+      const chain = [i];
       for (let h = 0; h < 2 + Math.floor(Math.random() * 2); h++) {
+        const cur = chain[chain.length - 1];
         let best = -1, bestD = Infinity;
         pts.forEach((p, j) => {
           if (chain.includes(j)) return;
@@ -160,7 +160,7 @@ export default function Hero() {
           if (d < LINK * 1.4 && d < bestD) { bestD = d; best = j; }
         });
         if (best === -1) break;
-        chain.push(best); cur = best;
+        chain.push(best);
       }
       if (chain.length < 2) return;
       bolts.push({ chain, life: 1, decay: 0.055 + Math.random() * 0.04 });
