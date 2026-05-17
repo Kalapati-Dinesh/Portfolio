@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import './index.css';
+import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,8 +15,16 @@ import Sparkle from './components/Sparkle';
 import './components/Sparkle.css';
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1400);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <>
+      {loading && <Loader />}
       <Sparkle />
       <Navbar />
       <Hero />

@@ -11,6 +11,14 @@
 #certificates { background: #091622; }
 #contact      { background: #0c1e38; }
 
+body.light #about        { background: #e8f0fc; }
+body.light #skills       { background: #f0f6ff; }
+body.light #experience   { background: #e4edf8; }
+body.light #projects     { background: #eef4fd; }
+body.light #education    { background: #e0ecfa; }
+body.light #certificates { background: #f0f6ff; }
+body.light #contact      { background: #e8f0fc; }
+
 .container { max-width: 1080px; margin: 0 auto; }
 
 .section-tag {

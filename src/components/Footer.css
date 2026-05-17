@@ -42,16 +42,12 @@
   font-size: 1.2rem;
   transition: all 0.2s;
   padding: 0.4rem;
-  border-radius: 6px;
-  border: 1px solid transparent;
   display: flex;
   align-items: center;
 }
 
 .footer-socials a:hover {
   color: var(--primary);
-  border-color: rgba(96,165,250,0.25);
-  background: rgba(96,165,250,0.08);
 }
 
 @media (max-width: 480px) {

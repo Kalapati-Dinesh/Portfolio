@@ -8,40 +8,39 @@
   padding: 0 8%;
 }
 
-.hero-bg {
+.hero-canvas {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
-  background:
-    radial-gradient(ellipse at 15% 60%, rgba(96,165,250,0.12) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, rgba(147,197,253,0.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(96,165,250,0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
-  animation: fadeUp 0.7s ease both;
+  max-width: 600px;
+  animation: fadeUp 0.7s ease 0.2s both;
+  transform-origin: left center;
 }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero-greeting {
-  font-size: 0.9rem;
-  color: var(--primary2);
-  margin-bottom: 1rem;
-  font-weight: 500;
+.hero-tag {
+  font-size: 0.82rem;
   font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  opacity: 0.75;
 }
 
 .hero-name {
-  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--text);
@@ -51,14 +50,14 @@
 
 .hero-name span {
   color: var(--primary);
-  text-shadow: 0 0 20px rgba(96,165,250,0.25);
+  text-shadow: 0 0 30px rgba(96,165,250,0.3);
 }
 
 .hero-desc {
-  font-size: 1.05rem;
+  font-size: 0.97rem;
   color: #a8b8cc;
   line-height: 1.9;
-  max-width: 520px;
+  max-width: 480px;
   margin-bottom: 2.5rem;
 }
 
@@ -86,12 +85,12 @@
   background: transparent;
   color: var(--primary);
   border: 1px solid var(--primary);
-  box-shadow: none;
 }
 
 .btn-primary:hover {
   background: rgba(96,165,250,0.18);
   transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(96,165,250,0.2);
 }
 
 .btn-outline {
@@ -118,33 +117,12 @@
   transition: all 0.25s;
   display: flex;
   align-items: center;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  padding: 0.4rem;
 }
 
 .hero-socials a:hover {
   color: var(--white);
-  border-color: rgba(147,197,253,0.3);
-  background: rgba(96,165,250,0.1);
   transform: translateY(-3px);
-}
-
-.scroll-down {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--muted);
-  font-size: 1.3rem;
-  cursor: pointer;
-  animation: bounce 2s ease-in-out infinite;
-  z-index: 1;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
 }
 
 @media (max-width: 768px) {

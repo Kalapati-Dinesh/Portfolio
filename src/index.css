@@ -29,6 +29,22 @@
   --bg-contact: #080e1a;
 }
 
+body.light {
+  --bg: #f0f6ff;
+  --bg2: #e4edf8;
+  --bg3: #d8e6f4;
+  --card: #ffffff;
+  --border: rgba(96, 165, 250, 0.2);
+  --primary: #2563eb;
+  --primary2: #3b82f6;
+  --primary3: #60a5fa;
+  --white: #1e293b;
+  --white2: #1e293b;
+  --text: #1e293b;
+  --muted: #64748b;
+  --glow: rgba(37, 99, 235, 0.2);
+}
+
 html { scroll-behavior: smooth; }
 
 body {
